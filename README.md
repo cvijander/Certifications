@@ -34,6 +34,16 @@ You can find the certifications in each folder under the appropriate section. He
 - [**Starting Your Career in Tech Software Development**](Learning%20Paths/CertificateOfCompletion_Starting%20Your%20Career%20in%20Tech%20Software%20Development.pdf)
 
 
+## List of Certifications 
+
+### C# & .Net
+- [C# Programming Certification (ITOP - Informacione Tehnologije, 2023)](https://github.com/cvijander/Certifications/blob/main/C%23%20%26%20.Net/CertificateOfCompletion_C%23%20Programming%20Certification.pdf)
+- [Foundational C# with Microsoft Developer Certification (freeCodeCamp & Microsoft, 2024)](https://github.com/cvijander/Certifications/blob/main/C%23%20%26%20.Net/CertificateOfCompletion_Foundational%20C%23%20with%20Microsoft%20Developer%20Certification.pdf)
+- [Complete C# Masterclass (Udemy, 2023)](https://github.com/cvijander/Certifications/blob/main/C%23%20%26%20.Net/CertificateOfCompletion_Complete%20C%23%20Masterclass.pdf)
+
+### Front-End Development
+- [Advance Your Skills in HTML - Learning Path (LinkedIn Learning, 2023)](https://github.com/cvijander/Certifications/blob/main/Front-End%20Development/HTML/CertificateOfCompletion_Advance%20Your%20Skills%20in%20HTML.pdf)
+- [Building Great Forms with HTML and CSS](https://github.com/cvijander/Certifications/blob/main/Front-End%20Development/HTML/CertificateOfCompletion_Building%20Great%20Forms%20with%20HTML%20and%20CSS.pdf)
 ---
 
 Feel free to contact me if you have any questions or if you want to discuss any of the certifications.
