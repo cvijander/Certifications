@@ -15,8 +15,8 @@ This repository contains all the certifications I've received in various fields 
 
 You can find the certifications in each folder under the appropriate section. Here are some key examples:
 
-- [**.NET Development for Beginners**](C# & .Net/CertificateOfCompletion_.NET%20Development%20for%20Beginners.pdf)
-- [**HTML Tables**](Front-End Development/HTML/CertificateOfCompletion_HTML%20Tables%20(1).pdf)
+- [.NET Development for Beginners](C%23%20%26%20.Net/CertificateOfCompletion_.NET%20Development%20for%20Beginners.pdf)
+- [[HTML Tables](Front-End%20Development/HTML/CertificateOfCompletion_HTML%20Tables%20(1).pdf)
 - [**Building a WordPress Membership Site**](Wordpress/CertificateOfCompletion_Building%20a%20WordPress%20Membership%20Site%20Getting%20Started.pdf)
 - [**Learning YouTube SEO**](Youtube/CertificateOfCompletion_Learning%20YouTube%20SEO.pdf)
 
