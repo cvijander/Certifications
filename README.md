@@ -26,6 +26,14 @@ You can find the certifications in each folder under the appropriate section. He
 2. Each file is named according to the certification or course name.
 3. Feel free to explore the certificates and gain insight into the skills learned.
 
+ ## Learning Paths Certifications
+
+- [**Advance Your Skills in HTML**](Learning%20Paths/CertificateOfCompletion_Advance%20Your%20Skills%20in%20HTML.pdf)
+- [**Become a Programmer Foundations**](Learning%20Paths/CertificateOfCompletion_Become%20a%20Programmer%20Foundations%20(1).pdf)
+- [**Build Your WordPress Ecommerce Skills**](Learning%20Paths/CertificateOfCompletion_Build%20Your%20WordPress%20Ecommerce%20Skills.pdf)
+- [**Starting Your Career in Tech Software Development**](Learning%20Paths/CertificateOfCompletion_Starting%20Your%20Career%20in%20Tech%20Software%20Development.pdf)
+
+
 ---
 
 Feel free to contact me if you have any questions or if you want to discuss any of the certifications.
