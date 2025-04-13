@@ -1,0 +1,544 @@
+
+CSS or cascading style sheets  is a technology of the web and can single handedly make tha internet a prettier place 
+It works together with HTML markup to describe the presentation of a page
+
+It is a style language used to control the appearance of markup languages like HTML
+HTML is a controlling the structure of the web while CSS controls the presentation of it.
+
+CSS is what makes the web pretty.CSS is a style sheet language, it is not a markup language like html, or a scripting language like javascript
+
+CSS comes with set of formatting rules to identify elements in a document and specify what style should be applied
+
+There are few way to apply css to html (3 types )
+-inline styles
+-style block inside document
+-external style sheets 
+
+We can have multiple stylesheets for a single web page or website
+
+The cascading part of CSS meant that style information from multiple sources can be combined
+
+You could have several external style sheets as well as inline styles 
+
+The rule is about cascading down from most general rules to the most specific 
+The most specific rule is always the one that wins the contest 
+
+External stylesheet have least specific ,next are embedded styles, and then most specific are inline styles
+
+Benefits of CSS
+-separate styles from structure
+-control styles for entire website in one place
+-tailor  styles to the device (responsive)
+
+
+Default browser styles
+Before users were allowed to control html pages trough cascading styles sheets browsers had to have some way of displaying html content visually. These were called default browser styles or user agents styles. Each browser has its own default styles.
+
+When you write css you are actually overwriting those default browser styles and replacing them with yours, how you want the elements to look.
+
+a lot of programmers use CSS normalization or CSS Reset
+-users can override your styles 
+-content should be accessible to all
+
+
+CSS has it own syntax or set of formatting rules to use 
+It is pretty minimal, the most basic description of the syntax is that it includes a selector and a declaration block. The selector points to the element that you want to style and declaration block which is enclosed in this curly braces and can contain one or more declarations
+
+Declaration = rules and they are made from two parts 
+Property and an value, these are separated by colons, and there is a semicolon to tell a browser to stop evaluating 
+
+Spacing does not mater, but it is primary used for readability while you are writing your styles 
+
+For selectors spaces do matter and are used intentionally
+
+p .class {} is not the same as p.class{} without spaces between them 
+
+CSS also let you group together more selectors if they are sharing the same declarations 
+it is done by separating each selector with a comma. 
+
+Comments in css
+-explain your code 
+-are ignored by browsers 
+
+single line comment  /* */ 
+and a multi line comments 
+/* 
+sdsd
+*/ 
+
+both start  with /* and ends with */ 
+
+Additional syntax rules
+-shorthand
+-pseudo-elements
+-pseudo-classes
+-inline style rules
+
+CSS Selectors
+Selectors are used to target html elements 
+
+Basic css selectors 
+-1. type selector (or element selector)
+-2. class selector
+-3. class selector
+-4. descendant selector
+
+
+Type  selectors are global in nature
+-based od individual html elements and applied globally
+like p, h1 , ul or even header, footer and so fourth
+
+they are used to set global site-wide styles 
+
+Class selector 
+-based on class attributes applied to any html element 
+
+syntax for this is .classname{} 
+You can name a class anything you want and you can use it on as many elements and as many times on a page as you need.This makes css class very popular and most common selectors that you will encounter
+
+ID selectors 
+-based on ID attributes applied to any html element
+-must be unique 
+-used once one on a page 
+
+id="content"     #idname{}
+
+
+Descendant selectors 
+-match all elements that are descendants of a specified element
+
+div span  ... browser will find any span elements that are nested in div elements regardless how many they are different span elements on specific page
+
+They can apply to any nested selector regardless of how deep it is found within the page structure
+
+syntax  #selector1 .selector2 {}  it is writing together by stringing the selectors together and separating them with a space 
+
+The parent selectors are added first then followed by each successive nested selector 
+
+Using descendant selectors 
+-aim to not nest more than four levels 
+- be mindful of performance 
+- overly specific
+- difficult  to override 
+
+
+Combinators is something we can use to explain the relationship between selectors
+There are 4 of them
+1. Descendant selectors (space)
+2. Child selector (>)
+3. Adjacent sibling selector (+)
+4. General sibling selector (~)
+
+
+Descendant selector 
+-matches all elements that are descendants of a selector
+
+Child selector
+-selects all direct children of a parent element 
+
+syntax parent > child {}
+
+only elements that are direct child of the div are selected 
+
+
+Sibling elements are on the same level, meaning they are not nested 
+
+Adjacent sibling selector 
+-selects the first element directly after a specified element 
+syntax  former_element + target_element{} 
+adjacent means immediately following  
+
+General sibling selector 
+- selects all elements after a specified element 
+syntax  former_element ~ target_element {}
+
+The general sibling selector targets all instances 
+
+
+How CSS works with HTML 
+CSS works with the structure of your html document allowing the browser to parse the html code, find the right element and style it accordingly
+
+Tips for working with css and html
+-use meaningful class and Id names 
+-use a consistent html structure 
+-structure first, design second
+
+Options for style locations 
+-external styles 
+-embedded styles 
+-inline styles 
+
+
+External style sheets are simply text files with a .css extension
+You will commonly see them named styles.css or style.css 
+This styles are applied to pages by using a link tag in the head of an html document
+External style sheets are probably the most efficient way of applying styles globally across the site.
+
+Embedded styles sometimes referred to as an internal style sheet
+And this is only applied to the documents that they are found in which makes them pretty inefficient and repetitive for site-wide styling, but perfect for targeted styles or for a particular page.
+
+
+Inline styles 
+These are styles added to an element as an html attribute 
+The syntax is starting with style="font-weight:bold"; ..
+Inline styles are very hard to overwrite and maintain over time
+
+In terms of cascade inline styles always wins, so it makes them very hard to overwrite
+
+
+
+How do browsers render styles 
+
+Load html -> parse html -> create dom tree -> display web page 
+                 |            A
+                 V            |
+              load css ->  parse CSS   
+
+
+When browser displays a document it is combining the document content with its style information
+This process happens in stages, when you are on a slow connection you will see that first plain text will render first before all the styles or images did
+All the same browsers do handle documents on a streaming fashion,
+browser read css selectors from right to left it means it first reads child and than parent , 
+ cascade it is from source order of the styles as they are applied withing the browser ,    
+ user agent styles, external style sheets , embedded styles and inline style sheets 
+
+ if these rules conflict each other , the most recent set of styles will override the earlier styles 
+
+ Cascade - the last most specific style rule wins - assuming it is equally specific
+
+
+ CSS Concepts 
+ Reset Css and Normalize.css
+ Both of these approaches attempt to solve the problem of cross browser inconsistencies but they go about it in really different ways 
+
+Reset css gives you completely clean state, but you have to go back and style each of these elements 
+
+Normalize instead wiping out all styles it specifically targets only the styles that are inconsistent across browsers. So it has many more styles applied and less work for you to do
+
+If you are designer, you know that typography is incredibly important to a design and the message you are trying to communicate.
+
+Basic font properties
+-font family (font-family)
+-font weight (font-weight)
+-font style (font-style)
+-font size (font-size)
+
+Font family 
+-specifies the font for an element
+-is a prioritized list of fonts
+-includes a fallback font 
+
+Font weight
+-specifies the weight of a font
+normal, bold, lighter ,100..900
+ not all fonts have all font weights
+
+Font style 
+-specifies style for a font
+normal, italic, oblique
+not all fonts have all font styles
+
+Font size
+-specifies a size for your element
+
+There are two types of font
+-system fonts 
+-web fonts 
+
+System fonts are fonts that are pre installed on almost every machine
+These are called system fonts or fallback fonts, like times new roman, georgia, ariel, tahoma etc
+
+Web fonts are fonts that are not on clients machine,
+like google fonts, adobe fonts,  web fonts are basically external style sheets that you can include in your project and there are more ways you can go about it.
+
+Incorporating web fonts 
+-@font-face
+-@import
+-link to style sheet
+-load with JavaScript
+
+
+first there is css font face rule 
+This allows you to download a particular font from your web server to render a webpage if the user does not have that font installed.
+
+Similarly import rule, you can use this from within an existing css file to import an external font resource
+
+You can link to an external style sheet or you can bring in a style sheet via javascript
+
+External fonts are really powerful as they give us the ability for brands to match typography across both the website and printed assets.
+
+CSS box model 
+is a foundation of layout on the web.The box model is the term used to describe the rules surrounding the physical properties of all html elements.
+
+Every single element on a web page is considered to be in a rectangular box, images, text, forms, everything. 
+
+CSS Box model 
+-width
+-height
+-border
+-margin 
+-padding 
+
+These define not only the size od an element but also how it relaters to the elements around it.
+
+Lets take an example, with a paragraph
+Moving from inside out the first property i want to notice is elements edge 
+If you do not specify a width or a height, then that's determined automatically based on how much space the content takes up.
+We can specify one property like width or height, and it will be calculated automatically.
+
+let say that the elements is 100 pixels, by the default CSS Box model, the box-sizing property is  set to content box.That means that if you set an element to 100 pixels, as in this case, then just the content box equals that 100 pixels. Any border or padding would be added on too of that.
+
+Padding is the space added to an element outside the elements edge. You can define padding individually for top, bottom, left, or right. When you add padding you increase the size of the box accordingly. So here we have a box of 100px and a padding of a 20px , that to add up is 140 px.
+
+But if we change box-sizing property to border box than all element will be included in this and it will have a max size of 100px wit border and padding
+
+Wrapping around padding is a border, while padding is just clear space, a border is visible and can have color and thickness applied to it, like padding a border can be applied specifically from top to right to bottom to left. It can also be styled as solid, dotted, dashed, or few other options. 
+
+Margin  - represents the space outside the border and it is used to define the space between elements on a page, margin do not factor into the overall width of the element
+
+Box model considerations 
+-if a property is not declared, you can not assume the value is 0
+-elements often have default margins you need to account for 
+-a 100% width property, when combined with padding and borders, can create elements that are larger than their parents 
+
+
+Normal flow
+-the default way elements are displayed on a page 
+
+
+Setting margins and padding
+Padding is that clear or transparent space that sits between the edge of an element and its border. We can specify a padding in several ways, individually for each side of the element, moving clockwise from top, right, bottom, left , also we have and solo settings 
+like padding-top, padding-right.. etc
+We can use shorthand notation 
+- padding with 4 values , 
+-padding with 3 values (first = top, second = left/right, third = bottom)
+-padding with 2 values (first = top/bottom, second = left/right)
+-padding with 1 value (all sides will have the same value)
+
+Margins are applied outside of an elements border and represent the space between elements 
+It does no affect the amount of space that an element takes up on the page, it is an important part of achieving proper spacing between elements 
+
+Margins use sam syntax as paddings, there are individual properties like 
+margin-top, margin-right etc or shorthand notation like 
+-margin with 4 values,
+-margin with 3 value , 2 and 1 value, just same as paddings 
+
+Unlike horizontal margins, vertical margins are sometimes combined or collapsed into a single margin whose size is the largest of the individual margins 
+
+Color properties
+-background-color
+-border-color
+-color
+
+Color value
+-color keywords
+-hex notation
+-rgb: red, green, blue 
+-hsl : hue, saturation, light
+
+Color keywords : black, silver, red.. these keywords map to a predetermined set of values that browsers will use to display the color, and note that these keywords work with all browsers.
+
+RBG , stands for red, green, blue it generates all the colors from the combination of red, green, and blue . Three numbers, separated by coma, first number indicates the intensity of the red, second is for green, third for the blue. Value 0 no intensity and 255 max intensity. 
+RGB (0,0,0) is black, RGB (255,255) is yellow, RGB (255,255,255) is white
+
+Hex notation is another way of representing rgb color 
+
+it is started as #ff0000 it means pound sing followed with three pairs representing the red, green, blue values of color 
+it is going from 0 to 9 and then from A to F (indicating it has also 16 values )
+and of course 16 *16 its = 256 (like RGB)
+
+HSL is a mixture of a color hue, saturation, and lightness 
+Hue is value from 0 to 360, saturation and lightness are 0 to 100 %
+
+RGBA Colors - with alpha channel -which specifies the opacity for a color 
+where alpha has value from 0 to 1 ,where zero has fully transparent and 1 is fully opaque
+
+HSLA the same idea for HSl 
+
+Borders 
+Css border properties allow you to specify the style, width, and color of an element's border.
+Similar to margins and paddings, borders can be defined from top, right, bottom and left sides individually. 
+We can use shorthand notation like border :1px solid black for all sides to have the same property
+
+Borders widths begin at the edge of padding widths and then extend outward.
+Border styles from none to 10 styles 
+Border -color it is a color of a border 
+
+CSS outline ia a drawn just outside of the borders edge 
+Outline provides a visual indicator showing me where i am on a page. 
+Outline draws a line outside all sides od the box. Outline is not part of the box model.so it does not affect the position of the element or nearby elements.
+
+Background property lets us add visual sophistication and style to even basic content 
+Background are typically transparent by default .We can set color, gradient or even images as background 
+
+CSS measurements 
+Some of them are absolute or fixed, while others are relative 
+px, em, rem, % 
+px - absolute -fixed length value 
+used to define height and width values 
+
+em - relative value , relative to the font size of the parent element
+value of text at its defaults size 
+
+rem - root ems, which are very similar to ems in that they are also a relative value,  but they are relative to the font size of the root element, which is html element.And if the html element does not have a specified font size, the browser default value of 16 pixels is used.
+Offers more predictable control than em 
+
+% are relative to the parent element 
+used in responsive layouts , as they let containers expand or shrink based on the size of the parent element. % are typically used on block level elements and not used for font sizing
+
+
+The cascade
+The css cascade level 4 specification 
+Takes an unordered list of declared values for a given property on a given element,
+sorts them by their declaration's precedence and outputs a single cascaded value 
+
+
+The cascade algorithm
+-origin and importance
+-specificity
+-order of appearance
+-inheritance
+
+
+Origin and importance 
+the highest weighted attribute that the cascade checks is a combination of the origin and importance of a rule.Origin can be either the user agent styles, any browser overrides set by individual user, and then external css. 
+
+Adding important to a css rule automatically jumps it to the front of the cascade algorithm.
+
+Specificity 
+This is how browser decides which rule applies if multiple rules have different selectors but could still apply to the same elements 
+Class selector is more specific than element selector, but also ID selector is more specific then class selector 
+
+Source order 
+refers where the style rule is coming from,whether that is from a user agent styles, an external style sheet etc. Even both rules have identical element selector from the same source, then the last one in the source order wins 
+
+Inheritance 
+Some css property values set on parent elements are inherited by their child elements.
+Unless a more specific rule pops up.
+
+
+Calculating specificity
+Each css rule has a weight score based on the elements that make up  the selector.
+if it is id then score is 1,0,0 
+class is 0,1,0 
+solo element is 0,0,1 
+so if we have a situation with h1 element and also id  than score is 1,0,1
+
+The highest score wins, which also make it the most specific also 
+
+In css we can apply the !important property to add more weight or importance to a property value pair than normal. 
+When to use !important override styles coming from code you don't control (third party code)
+
+Generally speaking do everything you can to avoid using !important 
+It is considered a bad practice, because it breaks a natural cascade algorithm making debugging much more difficult.
+Always try to use greater specificity before resorting to !important 
+Only use important to overwrite css from an outside source 
+Avoid important when writing code form other to use
+
+
+Structuring a page with css
+Browser reads an html document from top to bottom 
+
+Html page layouts 
+-tables older way of organizing html layout 
+-floats, positioning and clears 
+-css frameworks and grids (bootstrap)
+-flexbox 
+-css grids 
+
+in 2016 the world wide web consortium officially made a recommendation for Flexbox
+This is one dimensional flexible box module that let us distribute content evenly and flexibly to fill all the available space 
+We also now have something called CSS Grid 
+This is the first true two dimensional layout tool in css that lets us treat the view port like a canvas. The css grid radically changes how we design page layouts fot the web. 
+
+
+Flexbox is shorthand for flexible box 
+It is a layout module for css that gives you an efficient way to organize, arrange and size website elements to create responsive designs 
+Flexbox lets us arrange items within a parent container , and then get pretty specific about how we want those items to behave in relationship to one another 
+Flexbox works is pretty straightforward. You have a container its called the flex container or parent then you have the elements within the container and these are referred to as flex items or children.  The flex items are placed along flex lines which are either a vertical or horizontal access. These items can be manipulated in layout, size, spacing and even change order along flex line. 
+This allows you to take advantage of the available view port space and lets elements arrange themselves automatically as the view port dictates. Flexbox is one dimensional presentation model . Flex-direction: column  or flex-direction: row 
+You can define how space is distributed between elements and how should be aligned in relationship to the parent container. 
+
+Flexbox 
+-responsive (mobile-friendly)
+-ease of positioning child elements
+-change presentation order without altering html 
+-control width and height based on parent element
+
+for flexbox resource  CSS Tricks 
+
+
+CSS grid 
+is a newer css specification that gives us the most powerful way yet to control page layouts 
+CSS grid is two dimensional layout system, It allows to place html elements in a grid based layout using both rows and columns simultaneously 
+With  grid, we can apply a grid to a container and then put content wherever we want within that grid. Completely independent of semantic html markup. 
+Gird is an element with its display property set to grid.Grids have rows, and those are horizontal lines, and columns which are the vertical lines. 
+Grid lines are the lines that make up the grid, and they can be horizontal or vertical 
+Grid track is the space between two grid lines, grid tracks can also be horizontal or vertical 
+representing rows and columns. Grid cell is the space between four grid lines (top, right, bottom and left) and grid area is any area within the grid defined by its four outer most grid lines .Grid area can contain multiple cells and can cover multiple lines 
+
+CSS Framework 
+-is a collection of css files with predefined rules for commonly user thing like typography, ui components, layouts, and even browser resets. 
+Benefits of using a css framework 
+-achieving cross browser compatibility 
+-consistent styling 
+-creating responsive layouts 
+-speeding up your development time 
+-learning css 
+
+Popular css frameworks
+-foundation
+-bootstrap 
+-tailwind 
+
+Responsive web design 
+an approach to web design used to create layouts that respond to the device used to view the content 
+
+
+Older css methods 
+
+Css media queries 
+-width and height of the viewport
+-width and height of the device 
+-orientation 
+-resolution 
+
+Modern css methods 
+-flexbox 
+-grid 
+
+
+Tips for organizing CSS 
+-use comments liberally 
+-use consistent naming conventions 
+-use consistent formatting 
+-group like styles 
+-split up files 
+
+
+Browser inspection tools 
+Can i use for css property 
+CSS Validation service 
+w3c validation service 
+css lint 
+code  CSS beautifier and minifier
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
