@@ -1,0 +1,34 @@
+
+CSS is fundamental part of web design because it controls how your webpage looks. Without it website would only display text on white backgrounds. 
+
+Use html to define the structure of the document and add meaning to the content, CSS  controls the appearance of the document and separates presentation from the content. 
+
+Websites can be designed as a single page with content divided into sections within the same html page. For multi page websites related content is spread out over multiple html pages.
+These webpages are written using coding languages such as html and css, and contain other web resources such as images.
+
+Anatomy of a website 
+- a website is a collection of files and folders containing different web resources that are linked to each other.
+These different types of files are saved with specific file extensions. 
+
+Local web development 
+-working with website files stored on your computer
+-able to make changes and test your website locally before making it public 
+
+These files are stored in various folders also referred to as directories.
+The main folder is called the root directory, it contains all the project files.
+Other files are usually grouped in sub folders. 
+Linking to a file is important part of building a website, so it is equally important to follow a consistent structure. 
+Conventions for naming a files. Spaces and symbols should be avoided, with the exception of underscore and hyphens, which can be used to separate words. Google search engine optimization guide recommends separating word with hyphens. Also using all lowercase letters. Using meaningful and descriptive names is recommended for SEO, and it also just makes it easier for us to identify which file is used for what. 
+
+Getting a website online 
+-a domain name is the address used to access the website 
+-a server is used to store the website files 
+-web hosts provide the server space 
+
+First when starting with a project we are going to create a new folder - root with a symbolic name. Like personal site, inside we will create a new folders for css, images, also we are going to have a html files, starting with index.html as a starting point for our website. 
+
+
+
+
+
+
